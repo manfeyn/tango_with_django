@@ -8,7 +8,6 @@
 				<link rel="stylesheet" href="{% static " css/base.css"% }/">
 				<script src="{% static "js/jquery.js" %}"></script>
     </head>
-		<a href="/rango/add_category/"> Add a New Category</a> <br/ >
     <body>
         <h1>Rango says...</h1>
         hello world! <strong>{{ boldmessage }}</strong><br />
@@ -21,6 +20,8 @@
 				{% else %}
 					<strong>There are no categories present.</strong>
 				{% endif %}
+						
+				<a href="/rango/add_category/"> Add a New Category</a> <br/ > <br/ >
 
         <a href="/rango/about/">About</a><br />
 				<img src="{% static "images/iniesta.jpg" %}" alt = "iniesta's picture" / width="441" height="600">
