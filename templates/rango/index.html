@@ -1,16 +1,14 @@
-<CTYPE html>
+{% extends 'base.html' %}
 
 {% load staticfiles %}
 
-<html>
-    <head>
-        <title>Rango</title>
-				<link rel="stylesheet" href="{% static " css/base.css"% }/">
-				<script src="{% static "js/jquery.js" %}"></script>
-    </head>
-    <body>
-        <h1>Rango says...</h1>
-        hello world! <strong>{{ boldmessage }}</strong><br />
+{% block title %} {{ category_name }} {% endblock %}
+
+{% block body_block %}
+<h1>Rango says...</h1>
+
+hello world! <strong>{{ boldmessage }}</strong><br />
+
 				{% if categories %}
 					<ul>
 						{% for category in categories %}
@@ -23,8 +21,5 @@
 						
 				<a href="/rango/add_category/"> Add a New Category</a> <br/ > <br/ >
 
-        <a href="/rango/about/">About</a><br />
 				<img src="{% static "images/iniesta.jpg" %}" alt = "iniesta's picture" / width="441" height="600">
-    </body>
-</html>
-
+{% endblock %}

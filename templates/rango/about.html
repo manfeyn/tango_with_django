@@ -1,16 +1,16 @@
-<CTYPE html>
+{% extends 'base.html' %}
 {% load static  %}
-<html>
+
+{% block body_block %}
     <head>
         <title>About</title>
     </head>
 
-		<a href="/rango/add_page/"> Add a New Page</a> <br/ >
-
     <body>
 			This page lists some interesting things about Iniesta. <br />
+			<br />
 			<img src="{% static "images/about.jpg" %}" alt = "about.jpg" width = 400 height = 700>
     </body>
 
-</html>
+{% endblock %}
 
